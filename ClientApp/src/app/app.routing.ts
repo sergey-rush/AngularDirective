@@ -2,11 +2,9 @@ import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { CounterComponent } from './counter/counter.component';
 import { FetchDataComponent } from './fetch-data/fetch-data.component';
-import { HighlightDirective } from './highlight/highlight.directive';
 import { AdminComponent } from './admin/admin.component';
 import { LoginComponent } from './login/login.component';
-import { JwtInterceptor, ErrorInterceptor, fakeBackendProvider } from './auth';
-
+import { LogoutComponent } from './logout/logout.component';
 import { AuthGuard } from './auth';
 import { Role } from './models/role';
 
@@ -25,6 +23,10 @@ const routes: Routes = [
         path: 'login',
         component: LoginComponent
     },
+    {
+      path: 'logout',
+      component: LogoutComponent
+  },
     { 
       path: 'counter', 
     component: CounterComponent,
@@ -33,7 +35,7 @@ const routes: Routes = [
       { path: 'fetch-data', component: FetchDataComponent },
 
     // otherwise redirect to home
-    { path: '**', redirectTo: '' }
+    //{ path: '**', redirectTo: '' }
 ];
 
 export const appRoutingModule = RouterModule.forRoot(routes);

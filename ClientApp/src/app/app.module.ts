@@ -2,7 +2,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
-import { RouterModule } from '@angular/router';
 import { ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
@@ -13,6 +12,7 @@ import { FetchDataComponent } from './fetch-data/fetch-data.component';
 import { HighlightDirective } from './highlight/highlight.directive';
 import { AdminComponent } from './admin/admin.component';
 import { LoginComponent } from './login/login.component';
+import { LogoutComponent } from './logout/logout.component';
 import { JwtInterceptor, ErrorInterceptor, fakeBackendProvider } from './auth';
 import { appRoutingModule } from './app.routing';
 
@@ -25,6 +25,7 @@ import { appRoutingModule } from './app.routing';
     FetchDataComponent,
     HighlightDirective,
     LoginComponent,
+    LogoutComponent,
     AdminComponent    
   ],
   imports: [

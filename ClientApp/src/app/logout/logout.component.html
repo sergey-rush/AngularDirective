@@ -1,0 +1,11 @@
+﻿<div class="col-md-6 offset-md-3 mt-5">    
+    <div class="card">
+        <h4 class="card-header">Log out</h4>
+        <div class="card-body">                        
+                <button [disabled]="loading" class="btn btn-primary" (click)="onLogout($event)">
+                    <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span>
+                    Logout
+                </button> 
+        </div>
+    </div>
+</div>            
